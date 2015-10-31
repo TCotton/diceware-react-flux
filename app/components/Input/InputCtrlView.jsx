@@ -40,8 +40,8 @@ class InputCtrlView extends Component {
                 <input type='number' max='8' min='3' id='formKeywords' name='formKeywords' className={styles.form__input}
                        value='' ref='formKeywords'/>
 
-                <button type='submit' className={styles.button, styles.button__submit} value=''>submit</button>
-                <button type='reset' className={styles.button, styles.button__reset} value=''>reset</button>
+                <button type='submit' className={styles.button} value=''>submit</button>
+                <button type='reset' className={styles.button} value=''>reset</button>
               </form>
 
             </div>

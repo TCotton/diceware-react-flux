@@ -20,7 +20,7 @@ class HeaderCtrlView extends Component {
         <div className={styles.header__block}>
           <h1>Diceware</h1>
 
-          <h2><span class={styles.innerspan}>&nbsp;- create unbreakable passphrases</span></h2>
+          <h2><span className={styles.innerspan}>&nbsp;- create unbreakable passphrases</span></h2>
         </div>
       </div>
     );

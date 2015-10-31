@@ -109,13 +109,13 @@
 }
 
 .form__input::-webkit-inner-spin-button {
-  border: 5px solid #4b5f6a;
+  border: 5px solid $dark;
   cursor: pointer;
 }
 
 .button {
   font-size: 1.4em;
-  background: #d2dadd $results-button center center no-repeat;
+  background: $middle $results-button center center no-repeat;
   background-size: contain;
   height: 40px;
   width: 90px;
