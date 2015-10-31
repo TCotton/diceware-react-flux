@@ -1,0 +1,50 @@
+
+.results-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-in {
+  animation: 1s fadeIn;
+}
+
+.fade-out {
+  animation: 1s fadeOut;
+}
+
+.results-list__item {
+  text-align: center;
+  margin-top: 2em;
+  height: 50%;
+  line-height: 50px;
+  font-size: 1.4em;
+  width: calc(94% / 6);
+  background: $results-button center center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.results-list__item + .results-list__item {
+  margin-left: 1%;
+}
+
+[class*=results-list__remove] {
+  position: absolute;
+  top: -26px;
+  right: 12px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+}
+
+.results-list__remove-item {
+  background: $remove center center no-repeat;
+  cursor: pointer;
+}
+
+.results-list__removed-item {
+  background: $shrink center center no-repeat;
+  cursor: not-allowed;
+}

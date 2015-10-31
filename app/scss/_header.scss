@@ -1,0 +1,11 @@
+.header {
+  margin: 0 auto;
+  width: 1024px;
+  height: 6em;
+  display: flex;
+}
+
+.header__block {
+  align-self: flex-end;
+  flex: 1 100%;
+}

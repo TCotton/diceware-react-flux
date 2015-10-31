@@ -1,4 +1,4 @@
-import styles from './_Menu.scss';
+//import styles from './_Menu.scss';
 import React from 'react';
 import MenuItem from './MenuItem';
 

@@ -1,0 +1,23 @@
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 5em;
+  margin-bottom: 0.4em;
+  display: inline-block;
+  float: left;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  color: #c7242b;
+}
+
+h2 span {
+  display: inline-block;
+  float: left;
+}
+
+.content p {
+  font-size: 1.4em;
+  margin-bottom: calc(1.429em / 2);
+}
