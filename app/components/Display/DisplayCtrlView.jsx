@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './_DisplayCtrlView.scss';
 
 const displayName = 'DisplayCtrlView';
 const propTypes = {};
@@ -14,7 +15,7 @@ class DisplayCtrlView extends Component {
 
     return (
 
-      <div className='content__footer'>
+      <div className={styles.content__footer}>
         <div className='content__footer-inner'>
           <span
             hidden

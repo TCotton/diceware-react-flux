@@ -1,6 +1,7 @@
-@import "toolkit";
+@import "../../scss/toolkit";
 
-.app {
-  font-size: inherit;
-  @include my-padding-mixin(20px);
+.wrapper {
+  max-width: 1360px;
+  margin: 10px auto;
+  height: calc(100vh - 20px);
 }

@@ -1,0 +1,32 @@
+@import "../../scss/toolkit";
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 5em;
+  margin-bottom: .4em;
+  display: inline-block;
+  float: left;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2em;
+  color: $h2_text;
+}
+
+.innerspan {
+  display: inline-block;
+  float: left;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1024px;
+  height: 6em;
+  display: flex;
+}
+
+.header__block {
+  align-self: flex-end;
+  flex: 1 100%;
+}

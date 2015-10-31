@@ -1,7 +1,7 @@
 /**
  * Created by andywalpole on 31/10/15.
  */
-
+import styles from './_HeaderCtrlView.scss';
 import React, { Component } from 'react';
 
 const displayName = 'HeaderCtrlView';
@@ -16,11 +16,11 @@ class HeaderCtrlView extends Component {
 
   render() {
     return (
-      <div className='header'>
-        <div className='header__block'>
+      <div className={styles.header}>
+        <div className={styles.header__block}>
           <h1>Diceware</h1>
 
-          <h2><span>&nbsp;- create unbreakable passphrases</span></h2>
+          <h2><span class={styles.innerspan}>&nbsp;- create unbreakable passphrases</span></h2>
         </div>
       </div>
     );

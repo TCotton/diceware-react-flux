@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
 
 const displayName = 'InputCtrlView';
@@ -13,34 +14,34 @@ class InputCtrlView extends Component {
 
   render() {
     return (
-      <div className='content'>
-        <div className='content__inner'>
+      <div className={styles.content}>
+        <div className={styles.content__inner}>
 
-          <div className='content__left'>
+          <div className={styles.content__left}>
 
-            <div className='content__left-first-column'>
-              <div className='cube'>
-                <span className='cube__side'></span>
-                <span className='cube__side'></span>
-                <span className='cube__side'></span>
-                <span className='cube__side'></span>
-                <span className='cube__side'></span>
-                <span className='cube__side'></span>
+            <div className={styles.content__leftfirstcolumn}>
+              <div className={styles.cube}>
+                <span className={styles.cube__side}></span>
+                <span className={styles.cube__side}></span>
+                <span className={styles.cube__side}></span>
+                <span className={styles.cube__side}></span>
+                <span className={styles.cube__side}></span>
+                <span className={styles.cube__side}></span>
               </div>
 
               &nbsp;
             </div>
 
-            <div className='content__left-second-column'>
+            <div className={styles.content__leftsecondcolumn}>
 
               <form action='/' method='post' className='form' id='main-form'>
 
-                <label htmlFor='formKeywords' className='form__label'> # keywords </label>
-                <input type='number' max='8' min='3' id='formKeywords' name='formKeywords' className='form__input'
+                <label htmlFor='formKeywords' className={styles.form__label}> # keywords </label>
+                <input type='number' max='8' min='3' id='formKeywords' name='formKeywords' className={styles.form__input}
                        value='' ref='formKeywords'/>
 
-                <button type='submit' className='button button__submit' value=''>submit</button>
-                <button type='reset' className='button button__reset' value=''>reset</button>
+                <button type='submit' className={styles.button, styles.button__submit} value=''>submit</button>
+                <button type='reset' className={styles.button, styles.button__reset} value=''>reset</button>
               </form>
 
             </div>
@@ -48,7 +49,7 @@ class InputCtrlView extends Component {
           </div>
 
 
-          <div className='content__right'>
+          <div className={styles.content__right}>
             <p>Help protect your online security and privacy by creating unbreakable passphrases.</p>
 
             <p>Original created by author, academic and software engineer, Arnold Reinhold, in 1995;
