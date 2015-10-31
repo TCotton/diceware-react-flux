@@ -1,0 +1,87 @@
+.content {
+  margin: 0 10px;
+  background: url('images/background.svg') no-repeat top center;
+  background-size: 1024px auto;
+  height: calc(100% - 7vmin);
+}
+
+.content__inner {
+  margin: 0 auto;
+  width: 900px;
+  height: 338px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.content__left, .content__right {
+  height: 75%;
+  padding: 10px 5px 5px;
+  margin-top: 54px;
+}
+
+.content__left {
+  flex: 1 25%;
+  order: 1;
+}
+
+.content__right {
+  flex: 1 75%;
+  order: 2;
+}
+
+.content__footer {
+  flex: 1 100%;
+  order: 3;
+  height: 25%;
+  padding: 5px;
+}
+
+
+.content__left-first-column, .content__left-second-column {
+  float: left;
+  width: 50%;
+}
+
+.cube {
+  position: relative;
+}
+
+.cube__side {
+  position: absolute;
+  top: 20px;
+  left: 11px;
+  width: 75px;
+  height: 75px;
+  box-shadow: inset 0 0 40px #ccc;
+  border-radius: 10px;
+}
+
+.cube__side:nth-child(1) {
+  background: url('images/dice-side-one.svg') center center no-repeat;
+  z-index: 1;
+}
+
+.cube__side:nth-child(2) {
+  background: url('images/dice-side-two.svg') center center no-repeat;
+  z-index: 2;
+}
+
+.cube__side:nth-child(3) {
+  background: url('images/dice-side-three.svg') center center no-repeat;
+  z-index: 3;
+}
+
+.cube__side:nth-child(4) {
+  background: url('images/dice-side-four.svg') center center no-repeat;
+  z-index: 4;
+}
+
+.cube__side:nth-child(5) {
+  background: url('images/dice-side-five.svg') center center no-repeat;
+  z-index: 5;
+}
+
+.cube__side:nth-child(6) {
+  background: url('images/dice-side-six.svg') center center no-repeat;
+  z-index: 6;
+}

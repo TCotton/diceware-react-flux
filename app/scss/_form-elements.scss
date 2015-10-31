@@ -1,0 +1,41 @@
+.form__label, .form__input, .button {
+  float: left;
+  clear: both;
+}
+
+.form__label {
+  font-size: 1.4em;
+}
+
+.form__input {
+  font-size: 1.4em;
+  background: url('images/results-button.svg') center center no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  padding: 0 0 0 20px;
+  margin-bottom: 5px;
+}
+
+.form__input::-webkit-inner-spin-button {
+  border: 5px solid #4b5f6a;
+  cursor: pointer;
+}
+
+.button {
+  font-size: 1.4em;
+  background: #d2dadd url('images/results-button.svg') center center no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.button:hover {
+  background-color: white;
+}

@@ -1,5 +1,3 @@
-import styles from './_App.scss';
-
 import React from 'react';
 import AppActions from '../../actions/AppActions';
 import ItemsStore from '../../stores/ItemsStore';

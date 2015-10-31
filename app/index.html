@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en_gb">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title><%= title %></title>
   <% if (debug === false) { %>
-  <link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css" />
+  <link type="text/css" media="all"
+        href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Roboto+Condensed:400,300,300italic,400italic,700,700italic"/>
+  <link type="text/css" media="all" href="css/app.<%= version %>.css"/>
   <% } %>
 </head>
 <body>
-  <div id="app"></div>
-  <script src="js/app.<%= version %>.js"></script>
+<div id="app"></div>
+<script src="js/app.<%= version %>.js"></script>
 </body>
 </html>

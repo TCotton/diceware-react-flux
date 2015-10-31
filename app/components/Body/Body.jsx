@@ -1,4 +1,3 @@
-import styles from './_Body.scss';
 import React from 'react';
 import Menu from '../Menu/Menu';
 
