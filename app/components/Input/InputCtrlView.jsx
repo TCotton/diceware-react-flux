@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
 import ApiClass from '../../api/APIClass';
+import dataCache from '../../api/dataCache';
 
 const displayName = 'InputCtrlView';
 const propTypes = {};
@@ -13,10 +14,11 @@ class InputCtrlView extends Component {
     super(props);
 
     this.state = {
-      formKeywords: '6',
+      formKeywords: 6,
       dicewords: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;'],
       diceword: null
     };
+
   }
 
   componentWillMount() {
@@ -24,6 +26,27 @@ class InputCtrlView extends Component {
   }
 
   render() {
+
+    /**
+     * update formKeywords state on form change
+     * @param event
+     */
+    let saveDicewordsNumber = (event) => {
+      this.setState({formKeywords: event.target.value});
+    };
+
+    let submit = (event) => {
+      event.preventDefault();
+
+    };
+
+    let reset = (event) => {
+      event.preventDefault();
+      this.setState({formKeywords: 6});
+    };
+
+    let keyWords = this.state.formKeywords;
+
     return (
       <div className={styles.content}>
         <div className={styles.content__inner}>
@@ -48,11 +71,12 @@ class InputCtrlView extends Component {
               <form action='/' method='post' className='form' id='main-form'>
 
                 <label htmlFor='formKeywords' className={styles.form__label}> # keywords </label>
-                <input type='number' max='8' min='3' id='formKeywords' name='formKeywords' className={styles.form__input}
-                       value={this.state.formKeywords} ref='formKeywords'/>
+                <input type='number' max='8' min='3' id='formKeywords' name='formKeywords'
+                       className={styles.form__input}
+                       value={keyWords} onChange={saveDicewordsNumber} ref='formKeywords'/>
 
-                <button type='submit' className={styles.button} value=''>submit</button>
-                <button type='reset' className={styles.button} value=''>reset</button>
+                <button type='submit' className={styles.button} value='' onClick={submit}>submit</button>
+                <button type='reset' className={styles.button} value='' onClick={reset}>reset</button>
               </form>
 
             </div>
