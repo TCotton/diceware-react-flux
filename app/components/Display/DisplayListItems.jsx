@@ -7,7 +7,9 @@ import React, { Component } from 'react/addons';
 const displayName = 'DisplayListItems';
 const propTypes = {};
 const defaultProps = {
-  diceword: React.PropTypes.string.isRequired
+  diceword: React.PropTypes.string.isRequired,
+  onClick: React.PropTypes.func.isRequired,
+  number: React.PropTypes.number.isRequired
 };
 
 class DisplayListItems extends Component {
@@ -22,10 +24,12 @@ class DisplayListItems extends Component {
 
   render() {
 
+    console.log(this.props);
+
     return (
-      <li className={styles.resultslist__item}>
+      <li className={styles.resultslist__item} data-id={this.props.number}>
         <span ref='dicewareHTML' dangerouslySetInnerHTML={this._createMarkup()}></span>
-        <span className={styles.resultslist__removeitem} ref='removeListItem'></span>
+        <span className={styles.resultslist__removeitem} ref='removeListItem' onClick={this.props.onClick}></span>
       </li>
     );
 

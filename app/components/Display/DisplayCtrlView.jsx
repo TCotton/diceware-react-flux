@@ -14,6 +14,10 @@ class DisplayCtrlView extends Component {
     super(props);
   }
 
+  changeBoxIcon() {
+    console.log('change');
+  }
+
   render() {
 
     return (
@@ -32,7 +36,12 @@ class DisplayCtrlView extends Component {
           <ul className={styles.resultslist}>
 
             {Object.keys(this.props.dicewords).map(function(value, index) {
-              return <DisplayListItems key={index} diceword={this.props.dicewords[index]}/>;
+              return <DisplayListItems
+                key={index}
+                number={index}
+                diceword={this.props.dicewords[index]}
+                onClick={this.changeBoxIcon}
+                />;
             }, this)}
 
           </ul>

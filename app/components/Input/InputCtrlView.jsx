@@ -37,7 +37,6 @@ class InputCtrlView extends Component {
 
     let submit = (event) => {
       event.preventDefault();
-
     };
 
     let reset = (event) => {
@@ -75,8 +74,8 @@ class InputCtrlView extends Component {
                        className={styles.form__input}
                        value={keyWords} onChange={saveDicewordsNumber} ref='formKeywords'/>
 
-                <button type='submit' className={styles.button} value='' onClick={submit}>submit</button>
-                <button type='reset' className={styles.button} value='' onClick={reset}>reset</button>
+                <button type='submit' className={styles.button} onClick={submit}>submit</button>
+                <button type='reset' className={styles.button} onClick={reset}>reset</button>
               </form>
 
             </div>
