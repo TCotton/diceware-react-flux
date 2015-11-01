@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './_DisplayCtrlView.scss';
+import DisplayListItems from './DisplayListItems';
 
 const displayName = 'DisplayCtrlView';
 const propTypes = {};
@@ -25,6 +26,15 @@ class DisplayCtrlView extends Component {
             data-formkeywords='6'
             ref='resultListData'
             ></span>
+
+          <ul className={styles.resultslist}>
+
+            {Object.keys(this.props.dicewords).map(function(value, index) {
+              return <DisplayListItems key={index} diceword={this.props.dicewords[index]}/>;
+            }, this)}
+
+          </ul>
+
         </div>
       </div>
 

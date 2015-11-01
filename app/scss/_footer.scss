@@ -13,7 +13,7 @@
   animation: 1s fadeOut;
 }
 
-.results-list__item {
+.resultslist__item {
   text-align: center;
   margin-top: 2em;
   height: 50%;
@@ -25,11 +25,11 @@
   position: relative;
 }
 
-.results-list__item + .results-list__item {
+.resultslist__item + .resultslist__item {
   margin-left: 1%;
 }
 
-[class*=results-list__remove] {
+[class*=resultslist__remove] {
   position: absolute;
   top: -26px;
   right: 12px;
@@ -39,12 +39,12 @@
   background-size: contain;
 }
 
-.results-list__remove-item {
+.resultslist__remove-item {
   background: $remove center center no-repeat;
   cursor: pointer;
 }
 
-.results-list__removed-item {
+.resultslist__removed-item {
   background: $shrink center center no-repeat;
   cursor: not-allowed;
 }

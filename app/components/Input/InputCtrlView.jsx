@@ -10,7 +10,14 @@ class InputCtrlView extends Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      formKeywords: '6',
+      dicewords: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;']
+    };
   }
+
+
 
   render() {
     return (
@@ -38,7 +45,7 @@ class InputCtrlView extends Component {
 
                 <label htmlFor='formKeywords' className={styles.form__label}> # keywords </label>
                 <input type='number' max='8' min='3' id='formKeywords' name='formKeywords' className={styles.form__input}
-                       value='' ref='formKeywords'/>
+                       value={this.state.formKeywords} ref='formKeywords'/>
 
                 <button type='submit' className={styles.button} value=''>submit</button>
                 <button type='reset' className={styles.button} value=''>reset</button>
@@ -65,7 +72,7 @@ class InputCtrlView extends Component {
             <p>Side-project of Andy Walpole.</p>
           </div>
 
-          <DisplayCtrlView />
+          <DisplayCtrlView dicewords={this.state.dicewords}/>
 
         </div>
 

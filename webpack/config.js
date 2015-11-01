@@ -44,8 +44,7 @@ var config = {
   },
   postcss: [
     autoprefixer,
-    require('postcss-focus'),
-    require('postcss-flexbugs-fixes')
+    require('postcss-focus')
   ],
   plugins: plugins,
   resolve: {

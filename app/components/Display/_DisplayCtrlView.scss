@@ -1,6 +1,50 @@
+@import "../../scss/toolkit";
+
 .content__footer {
   flex: 1 100%;
   order: 3;
   height: 25%;
   padding: 5px;
+}
+
+.resultslist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultslist__item {
+  text-align: center;
+  margin-top: 2em;
+  height: 50%;
+  line-height: 50px;
+  font-size: 1.4em;
+  width: calc(94% / 6);
+  background: $results-button center center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.resultslist__item + .resultslist__item {
+  margin-left: 1%;
+}
+
+[class*=resultslist__remove] {
+  position: absolute;
+  top: -26px;
+  right: 12px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+}
+
+.resultslist__removeitem {
+  background: $remove center center no-repeat;
+  cursor: pointer;
+}
+
+.resultslist__removeditem {
+  background: $shrink center center no-repeat;
+  cursor: not-allowed;
 }
