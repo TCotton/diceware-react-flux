@@ -5,11 +5,10 @@
   background: $background no-repeat top center;
   background-size: 1024px auto;
   height: calc(100% - 7vmin);
-}
-
-.content p {
-  font-size: 1.4em;
-  margin-bottom: calc(1.429em / 2);
+  p {
+    font-size: 1.4em;
+    margin-bottom: calc(1.429em / 2);
+  }
 }
 
 .content__inner {
@@ -20,7 +19,8 @@
   flex-flow: row wrap;
 }
 
-.content__left, .content__right {
+.content__left,
+.content__right {
   height: 75%;
   padding: 10px 5px 5px;
   margin-top: 54px;
@@ -52,7 +52,7 @@
   left: 11px;
   width: 75px;
   height: 75px;
-  box-shadow: inset 0 0 40px #ccc;
+  box-shadow: inset 0 0 40px $grey;
   border-radius: 10px;
 }
 
@@ -86,7 +86,9 @@
   z-index: 6;
 }
 
-.form__label, .form__input, .button {
+.form__label,
+.form__input,
+.button {
   float: left;
   clear: both;
 }
@@ -113,6 +115,7 @@
   cursor: pointer;
 }
 
+
 .button {
   font-size: 1.4em;
   background: $middle $results-button center center no-repeat;
@@ -125,5 +128,5 @@
 }
 
 .button:hover {
-  background-color: white;
+  background-color: $white;
 }
