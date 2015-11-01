@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
+import ApiClass from '../../api/APIClass';
 
 const displayName = 'InputCtrlView';
 const propTypes = {};
@@ -13,11 +14,14 @@ class InputCtrlView extends Component {
 
     this.state = {
       formKeywords: '6',
-      dicewords: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;']
+      dicewords: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;'],
+      diceword: null
     };
   }
 
-
+  componentWillMount() {
+    this.setState({diceword: ApiClass.retrieveContent()});
+  }
 
   render() {
     return (

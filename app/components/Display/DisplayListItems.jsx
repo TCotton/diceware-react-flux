@@ -6,7 +6,9 @@ import React, { Component } from 'react/addons';
 
 const displayName = 'DisplayListItems';
 const propTypes = {};
-const defaultProps = {};
+const defaultProps = {
+  diceword: React.PropTypes.string.isRequired
+};
 
 class DisplayListItems extends Component {
 

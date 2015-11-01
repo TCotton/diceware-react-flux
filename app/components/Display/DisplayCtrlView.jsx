@@ -4,7 +4,9 @@ import DisplayListItems from './DisplayListItems';
 
 const displayName = 'DisplayCtrlView';
 const propTypes = {};
-const defaultProps = {};
+const defaultProps = {
+  dicewords: React.PropTypes.array.isRequired
+};
 
 class DisplayCtrlView extends Component {
 
