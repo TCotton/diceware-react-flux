@@ -3,8 +3,8 @@ import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
 import DicewareApi from '../../api/DicewareApi';
 //import dataCache from '../../api/dataCache';
-/*import InputStore from '../../stores/InputStore';
-import AppActions from '../../actions/AppActions';*/
+import InputStore from '../../stores/InputStore';
+import AppActions from '../../actions/AppActions';
 
 const displayName = 'InputCtrlView';
 const propTypes = {};
@@ -39,7 +39,7 @@ class InputCtrlView extends Component {
 
     let submit = (event) => {
       event.preventDefault();
-      DicewareApi.setKeywordNum(this.state.formKeywords);
+      AppActions.setKeywordsNumbers(this.state.formKeywords);
     };
 
     let reset = (event) => {

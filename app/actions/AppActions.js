@@ -3,26 +3,10 @@ import DicewareApi from '../api/DicewareApi';
 import DataCache from '../api/dataCache';
 
 import {
-  SAVE_KEYWORD_NUMBERS,
   GET_KEYWORD_LIST,
+  GET_KEYWORD_NUMBERS,
+  SET_KEYWORD_NUMBERS
 } from '../constants/AppConstants';
-
-/*export default {
-  getItems() {
-    WebAPI.getItems()
-    .then((items) => {
-      AppDispatcher.dispatch({
-        actionType: ITEMS_GET_SUCCESS,
-        items: items
-      });
-    })
-    .catch(() => {
-      AppDispatcher.dispatch({
-        actionType: ITEMS_GET_ERROR
-      });
-    });
-  }
-};*/
 
 class AppActions {
 
@@ -43,6 +27,19 @@ class AppActions {
     AppDispatcher.dispatch({
       actionType: GET_KEYWORD_NUMBERS,
       keywordsData: keywordsNum || 6
+    });
+
+  }
+
+  static setKeywordsNumbers(input) {
+
+    DicewareApi.setKeywordNum(input);
+
+    // Hey dispatcher, go tell all relevant stores that a number of keywords has been set
+    // and is ready for first stage of display
+    AppDispatcher.dispatch({
+      actionType: SET_KEYWORD_NUMBERS,
+      keywordsData: DicewareApi.getKeywordNum()
     });
 
   }
