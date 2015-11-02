@@ -1,12 +1,13 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
-import WebAPI from '../util/WebAPI';
+import ApiClass from '../api/ApiClass';
+import DataCache from '../api/dataCache';
 
 import {
-  ITEMS_GET_SUCCESS,
-  ITEMS_GET_ERROR
+  SAVE_KEYWORD_NUMBERS,
+  GET_KEYWORD_LIST,
 } from '../constants/AppConstants';
 
-export default {
+/*export default {
   getItems() {
     WebAPI.getItems()
     .then((items) => {
@@ -21,4 +22,20 @@ export default {
       });
     });
   }
-};
+};*/
+
+class AppActions {
+
+  getKeywords() {
+
+    var keywords = ApiClass.retrieveContent();
+
+    AppDispatcher.dispatch({
+      actionType: GET_KEYWORD_LIST,
+      keywordsData: keywords
+    });
+  }
+
+}
+
+export default AppActions;

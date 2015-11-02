@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
-import ApiClass from '../../api/APIClass';
-import dataCache from '../../api/dataCache';
+//import ApiClass from '../../api/APIClass';
+//import dataCache from '../../api/dataCache';
+import InputStore from '../../stores/InputStore';
+import AppActions from '../../actions/AppActions';
 
 const displayName = 'InputCtrlView';
 const propTypes = {};
@@ -22,7 +24,7 @@ class InputCtrlView extends Component {
   }
 
   componentWillMount() {
-    this.setState({diceword: ApiClass.retrieveContent()});
+    this.setState({diceword: InputStore.getKeyWordsData()});
   }
 
   render() {
