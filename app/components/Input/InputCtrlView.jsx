@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
-//import ApiClass from '../../api/APIClass';
+import DicewareApi from '../../api/DicewareApi';
 //import dataCache from '../../api/dataCache';
-import InputStore from '../../stores/InputStore';
-import AppActions from '../../actions/AppActions';
+/*import InputStore from '../../stores/InputStore';
+import AppActions from '../../actions/AppActions';*/
 
 const displayName = 'InputCtrlView';
 const propTypes = {};
@@ -24,7 +24,7 @@ class InputCtrlView extends Component {
   }
 
   componentWillMount() {
-    this.setState({diceword: InputStore.getKeyWordsData()});
+    this.setState({diceword: DicewareApi.retrieveContent()});
   }
 
   render() {
@@ -33,12 +33,13 @@ class InputCtrlView extends Component {
      * update formKeywords state on form change
      * @param event
      */
-    let saveDicewordsNumber = (event) => {
+    let setDicewordsNumber = (event) => {
       this.setState({formKeywords: event.target.value});
     };
 
     let submit = (event) => {
       event.preventDefault();
+      DicewareApi.setKeywordNum(this.state.formKeywords);
     };
 
     let reset = (event) => {
@@ -74,7 +75,7 @@ class InputCtrlView extends Component {
                 <label htmlFor='formKeywords' className={styles.form__label}> # keywords </label>
                 <input type='number' max='8' min='3' id='formKeywords' name='formKeywords'
                        className={styles.form__input}
-                       value={keyWords} onChange={saveDicewordsNumber} ref='formKeywords'/>
+                       value={keyWords} onChange={setDicewordsNumber} ref='formKeywords'/>
 
                 <button type='submit' className={styles.button} onClick={submit}>submit</button>
                 <button type='reset' className={styles.button} onClick={reset}>reset</button>

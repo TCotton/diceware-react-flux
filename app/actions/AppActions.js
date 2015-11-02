@@ -1,5 +1,5 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
-import ApiClass from '../api/ApiClass';
+import DicewareApi from '../api/DicewareApi';
 import DataCache from '../api/dataCache';
 
 import {
@@ -28,12 +28,23 @@ class AppActions {
 
   getKeywords() {
 
-    var keywords = ApiClass.retrieveContent();
+    let keywords = DicewareApi.retrieveContent();
 
     AppDispatcher.dispatch({
       actionType: GET_KEYWORD_LIST,
       keywordsData: keywords
     });
+  }
+
+  getKeywordsNumbers() {
+
+    let keywordsNum = DicewareApi.getKeywordNum();
+
+    AppDispatcher.dispatch({
+      actionType: GET_KEYWORD_NUMBERS,
+      keywordsData: keywordsNum || 6
+    });
+
   }
 
 }

@@ -43,8 +43,8 @@ var config = {
     loaders: loaders
   },
   postcss: [
-    autoprefixer,
-    require('postcss-focus')
+    autoprefixer
+    //require('postcss-focus')
   ],
   plugins: plugins,
   resolve: {

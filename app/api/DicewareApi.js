@@ -2,8 +2,9 @@
  * Created by andywalpole on 01/11/15.
  */
 import JsonUrl from '../data/diceware';
+import DataCache from './dataCache';
 
-class ApiClass {
+class DicewareApi {
 
   static retrieveContent() {
 
@@ -20,7 +21,16 @@ class ApiClass {
 
   }
 
+  static setKeywordNum(input) {
+    this.keywordsNums = new DataCache();
+    this.keywordsNums.cache = input;
+  }
+
+  static getKeywordNum() {
+    return this.keywordsNums.cache;
+  }
+
 }
 
-export default ApiClass;
+export default DicewareApi;
 

@@ -24,8 +24,6 @@ class DisplayListItems extends Component {
 
   render() {
 
-    console.log(this.props);
-
     return (
       <li className={styles.resultslist__item} data-id={this.props.number}>
         <span ref='dicewareHTML' dangerouslySetInnerHTML={this._createMarkup()}></span>
