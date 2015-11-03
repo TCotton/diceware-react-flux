@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
 import DicewareApi from '../../api/DicewareApi';
-//import dataCache from '../../api/dataCache';
 import InputStore from '../../stores/InputStore';
 import AppActions from '../../actions/AppActions';
 

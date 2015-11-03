@@ -26,14 +26,6 @@ class DisplayCtrlView extends Component {
 
       <div className={styles.content__footer}>
         <div className='content__footer-inner'>
-          <span
-            hidden
-            className='results-list-data'
-            data-submit='true'
-            data-reset='true'
-            data-formkeywords='6'
-            ref='resultListData'
-            ></span>
 
           <ul className={styles.resultslist}>
 

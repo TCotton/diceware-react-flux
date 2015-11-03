@@ -4,7 +4,7 @@
 
 import { EventEmitter } from 'events';
 import AppDispatcher from '../dispatcher/AppDispatcher';
-import cryptoMixin from '../mixins/cryptoMixin'
+import cryptoMixin from '../mixins/cryptoMixin';
 
 import {
   GET_KEYWORD_LIST,
@@ -43,7 +43,7 @@ var InputStore = Object.assign({}, EventEmitter.prototype, cryptoMixin, {
 
   getKeywordsByNumber: function() {
 
-    var dicewordsArray = [];
+    let dicewordsArray = [];
 
     for (let x = 0; x < Number.parseInt(_numKeywords, 10); x++) {
       dicewordsArray.push(_keywords.get(Number.parseInt(this.getRandomSequence(5, 1, 6), 10)));
