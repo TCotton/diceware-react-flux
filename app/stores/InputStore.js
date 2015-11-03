@@ -4,64 +4,69 @@
 
 import { EventEmitter } from 'events';
 import AppDispatcher from '../dispatcher/AppDispatcher';
-//import util from 'util';
+import cryptoMixin from '../mixins/cryptoMixin'
 
 import {
-  SAVE_KEYWORD_NUMBERS,
   GET_KEYWORD_LIST,
-  SET_KEYWORD_NUMBERS,
+  GET_KEYWORD_NUMBERS,
+  SET_KEYWORD_NUMBERS
 } from '../constants/AppConstants';
 
 const CHANGE_EVENT = 'change';
 
 let _numKeywords = '';
-let _Keywords = '';
+let _keywords = '';
+let _findWorkds = false;
+let _dicewordsArray = '';
 
-class InputStore extends EventEmitter {
+var InputStore = Object.assign({}, EventEmitter.prototype, cryptoMixin, {
 
-  constructor() {
-    super();
-  }
-
-  static addChangeListener(callback) {
+  addChangeListener: function(callback) {
     this.on(CHANGE_EVENT, callback);
-  }
+  },
 
-  static removeChangeListener(callback) {
+  removeChangeListener: function(callback) {
     this.removeListener(CHANGE_EVENT, callback);
-  }
+  },
 
-  static emitChange() {
-    console.dir(this.emit);
-    //this.emit(CHANGE_EVENT);
-   // this.emit(CHANGE_EVENT);
-  }
+  emitChange: function() {
+    this.emit(CHANGE_EVENT);
+  },
 
-  static getKeyWordsData() {
-    return _Keywords;
-  }
+  getKeyWordsData: function() {
+    return _keywords;
+  },
 
-  static getNumKeywords() {
+  getNumKeywords: function() {
     return _numKeywords;
+  },
+
+  getKeywordsByNumber: function() {
+
+    var dicewordsArray = [];
+
+    for (let x = 0; x < Number.parseInt(_numKeywords, 10); x++) {
+      dicewordsArray.push(_keywords.get(Number.parseInt(this.getRandomSequence(5, 1, 6), 10)));
+    }
+
+    return dicewordsArray;
   }
 
-}
-
-/*util.inherits(InputStore, EventEmitter);
-console.dir(InputStore);*/
+});
 
 AppDispatcher.register(function(action) {
 
   switch (action.actionType) {
     case SET_KEYWORD_NUMBERS:
       _numKeywords = action.keywordsData;
-      console.log('_numKeywords');
-      console.log(_numKeywords);
+      InputStore.emitChange();
+      break;
+    case GET_KEYWORD_LIST:
+      _keywords = action.allAllkeywords;
       InputStore.emitChange();
       break;
   }
 
 });
 
-export default InputStore;
-
+module.exports = InputStore;

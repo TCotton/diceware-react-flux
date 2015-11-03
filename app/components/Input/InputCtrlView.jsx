@@ -24,11 +24,24 @@ class InputCtrlView extends Component {
   }
 
   componentWillMount() {
-    this.setState({diceword: DicewareApi.retrieveContent()});
+    /**
+     * creates full set of diceware keywords which is stored
+     * in a Map in the relevant store
+     */
+    AppActions.getKeywords();
+    /**
+     * Adds store listen for when submit button is clicked
+     */
+    InputStore.addChangeListener(() => {
+      return this.onChange();
+    });
+  }
+
+  onChange() {
+    this.setState({dicewords: InputStore.getKeywordsByNumber()});
   }
 
   render() {
-
     /**
      * update formKeywords state on form change
      * @param event

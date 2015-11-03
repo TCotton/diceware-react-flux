@@ -5,30 +5,19 @@ import DataCache from '../api/dataCache';
 import {
   GET_KEYWORD_LIST,
   GET_KEYWORD_NUMBERS,
-  SET_KEYWORD_NUMBERS
+  SET_KEYWORD_NUMBERS,
 } from '../constants/AppConstants';
 
 class AppActions {
 
-  getKeywords() {
+  static getKeywords() {
 
     let keywords = DicewareApi.retrieveContent();
 
     AppDispatcher.dispatch({
       actionType: GET_KEYWORD_LIST,
-      keywordsData: keywords
+      allAllkeywords: keywords
     });
-  }
-
-  getKeywordsNumbers() {
-
-    let keywordsNum = DicewareApi.getKeywordNum();
-
-    AppDispatcher.dispatch({
-      actionType: GET_KEYWORD_NUMBERS,
-      keywordsData: keywordsNum || 6
-    });
-
   }
 
   static setKeywordsNumbers(input) {

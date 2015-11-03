@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from './_DisplayCtrlView.scss';
 import DisplayListItems from './DisplayListItems';
+import InputStore from '../../stores/InputStore';
+import AppActions from '../../actions/AppActions';
 
 const displayName = 'DisplayCtrlView';
 const propTypes = {};
