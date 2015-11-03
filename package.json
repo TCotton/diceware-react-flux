@@ -1,9 +1,10 @@
 {
   "name": "diceware-react-flux",
   "version": "0.0.1",
-  "description": "Seed project for React apps using ES6 & webpack.",
+  "description": "Diceware project built on top of React / Flux base.",
   "repository": "https://github.com/TCotton/diceware-react-flux",
   "license": "MIT",
+  "main": "index.js",
   "config": {
     "buildDir": "./build",
     "buildDirTests": "./build_tests",
