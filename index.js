@@ -19,7 +19,7 @@ if (app.get('env') === 'production') {
     extended: true
   }));
   app.use(bodyParser.json());
-  app.use(methodOverride()); 						// simulate DELETE and PUT
+  app.use(methodOverride());// simulate DELETE and PUT
   app.use(cookieParser());
 
   app.set('port', process.env.PORT || 3000);
@@ -58,4 +58,3 @@ if (app.get('env') === 'production') {
   });
 
 }
-

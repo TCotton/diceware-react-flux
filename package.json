@@ -1,6 +1,6 @@
 {
   "name": "diceware-react-flux",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Diceware project built on top of React / Flux base.",
   "repository": "https://github.com/TCotton/diceware-react-flux",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "devPort": 8000
   },
   "scripts": {
-    "build": "NODE_ENV=production npm run webpack",
+    "build": "NODE_ENV=production bump --prompt && npm run webpack",
     "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
     "env": "env",
     "lint": "eslint --ext .js --ext .jsx ./app ./webpack && echo No linting errors.",
@@ -68,7 +68,7 @@
     "mocha": "^2.2.5",
     "mocha-loader": "^0.7.1",
     "node-libs-browser": "^0.5.2",
-    "node-sass": "^3.2.0",
+    "node-sass": "^3.4.1",
     "opn": "^3.0.2",
     "phantomjs": "^1.9.17",
     "postcss-flexbugs-fixes": "^2.0.0",
@@ -77,12 +77,13 @@
     "postcss-short": "^1.3.1",
     "react-hot-loader": "^1.2.8",
     "rimraf": "^2.4.1",
-    "sass-loader": "^1.0.2",
+    "sass-loader": "^3.1.1 ",
     "sinon": "^1.15.4",
     "source-map-support": "^0.3.2",
     "style-loader": "^0.12.3",
     "template-html-loader": "0.0.3",
-    "webpack": "^1.10.1",
+    "version-bump-prompt": "^1.5.2",
+    "webpack": "^1.12.2",
     "webpack-dev-server": "^1.10.1"
   },
   "engines": {
