@@ -1,6 +1,6 @@
 {
   "name": "diceware-react-flux",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "description": "Diceware project built on top of React / Flux base.",
   "repository": "https://github.com/TCotton/diceware-react-flux",
   "license": "MIT",
@@ -32,6 +32,9 @@
     "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
     "flux": "^2.0.3",
+    "helmet": "^0.14.0",
+    "helmet-csp": "^0.3.0",
+    "method-override": "^2.3.5",
     "react": "^0.13.3",
     "serve-favicon": "^2.3.0"
   },
