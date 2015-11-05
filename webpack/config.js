@@ -1,3 +1,4 @@
+'use strict';
 let path = require('path');
 let util = require('util');
 let autoprefixer = require('autoprefixer-core');

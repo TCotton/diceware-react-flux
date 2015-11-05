@@ -1,15 +1,16 @@
-var path = require('path');
-var pkg = require('../package.json');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+'use strict';
+let path = require('path');
+let pkg = require('../package.json');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var DEBUG = process.env.NODE_ENV === 'development';
-var TEST = process.env.NODE_ENV === 'test';
+let DEBUG = process.env.NODE_ENV === 'development';
+let TEST = process.env.NODE_ENV === 'test';
 
-var jsxLoader;
-var sassLoader;
-var cssLoader;
-var fileLoader = 'file-loader?name=[path][name].[ext]';
-var htmlLoader = [
+let jsxLoader;
+let sassLoader;
+let cssLoader;
+let fileLoader = 'file-loader?name=[path][name].[ext]';
+let htmlLoader = [
   'file-loader?name=[path][name].[ext]',
   'template-html-loader?' + [
     'raw=true',
@@ -19,9 +20,9 @@ var htmlLoader = [
     'debug=' + DEBUG
   ].join('&')
 ].join('!');
-var jsonLoader = ['json-loader'];
+let jsonLoader = ['json-loader'];
 
-var sassParams = [
+let sassParams = [
   'outputStyle=expanded',
   'includePaths[]=' + path.resolve(__dirname, '../app/scss'),
   'includePaths[]=' + path.resolve(__dirname, '../node_modules')

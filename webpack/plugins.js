@@ -1,4 +1,5 @@
-var path = require('path');
+'use strict';
+let path = require('path');
 let util = require('util');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let webpack = require('webpack');
