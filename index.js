@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Created by andywalpole on 03/11/2015.
  */
@@ -8,6 +9,7 @@ let bodyParser = require('body-parser');
 let compress = require('compression');
 let favicon = require('serve-favicon');
 let cookieParser = require('cookie-parser');
+let methodOverride = require('method-override');
 
 const app = express();
 const sixMonths = 14515200;
@@ -24,14 +26,13 @@ if (app.get('env') === 'production') {
 
   app.set('port', process.env.PORT || 3000);
 
-  app.use(favicon(path.join(__dirname, 'dist/favicon.ico')));
+  app.use(favicon(path.join(__dirname, './build/favicon.ico')));
 
   app.all('*', function(req, res, next) {
     res.header('Cache-Control', 'no-cache');
     next();
   });
 
-/*
   app.all('/css/!*', function(req, res, next) {
     res.header('Cache-Control', 'public, max-age=' + sixMonths);
     next();
@@ -41,11 +42,8 @@ if (app.get('env') === 'production') {
     res.header('Cache-Control', 'public, max-age=' + sixMonths);
     next();
   });
-*/
 
-  app.use(express.static(path.join(__dirname, 'build')));
-
-  // set the static files location /public/img will be /img for users
+  app.use(express.static(path.join(__dirname, './build')));
 
   // production error handler
   // no stacktraces leaked to user
@@ -56,5 +54,7 @@ if (app.get('env') === 'production') {
       error: {}
     });
   });
+
+  app.listen(app.get('port'), () => {});
 
 }
