@@ -1,17 +1,18 @@
 var path = require('path');
-var util = require('util');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
-var pkg = require('../package.json');
+let util = require('util');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let webpack = require('webpack');
+let pkg = require('../package.json');
 
-var DEBUG = process.env.NODE_ENV === 'development';
-var TEST = process.env.NODE_ENV === 'test';
+let DEBUG = process.env.NODE_ENV === 'development';
+let TEST = process.env.NODE_ENV === 'test';
 
-var cssBundle = path.join('css', util.format('[name].%s.css', pkg.version));
+let cssBundle = path.join('css', util.format('[name].%s.css', pkg.version));
 
-var plugins = [
+let plugins = [
   new webpack.optimize.OccurenceOrderPlugin()
 ];
+
 if (DEBUG) {
   plugins.push(
     new webpack.HotModuleReplacementPlugin()

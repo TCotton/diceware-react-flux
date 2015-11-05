@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './_InputCtrlView.scss';
 import DisplayCtrlView from '../Display/DisplayCtrlView';
-import DicewareApi from '../../api/DicewareApi';
 import InputStore from '../../stores/InputStore';
 import AppActions from '../../actions/AppActions';
 
@@ -96,7 +95,6 @@ class InputCtrlView extends Component {
             </div>
 
           </div>
-
 
           <div className={styles.content__right}>
             <p>Help protect your online security and privacy by creating unbreakable passphrases.</p>

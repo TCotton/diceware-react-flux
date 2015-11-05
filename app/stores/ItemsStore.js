@@ -24,12 +24,14 @@ class ItemsStore extends BaseStore {
 let store = new ItemsStore();
 
 AppDispatcher.register((action) => {
-  switch(action.actionType) {
+
+  switch (action.actionType) {
     case ITEMS_GET_SUCCESS:
       store.setAll(action.items);
       break;
     default:
   }
+
 });
 
 export default store;

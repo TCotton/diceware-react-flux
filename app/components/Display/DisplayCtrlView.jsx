@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styles from './_DisplayCtrlView.scss';
 import DisplayListItems from './DisplayListItems';
-import InputStore from '../../stores/InputStore';
-import AppActions from '../../actions/AppActions';
 
 const displayName = 'DisplayCtrlView';
 const propTypes = {};
@@ -23,27 +21,19 @@ class DisplayCtrlView extends Component {
   render() {
 
     return (
-
       <div className={styles.content__footer}>
         <div className='content__footer-inner'>
 
           <ul className={styles.resultslist}>
 
             {Object.keys(this.props.dicewords).map(function(value, index) {
-              return <DisplayListItems
-                key={index}
-                number={index}
-                diceword={this.props.dicewords[index]}
-                onClick={this.changeBoxIcon}
-                />;
+              return <DisplayListItems key={index} number={index} diceword={this.props.dicewords[index]} onClick={this.changeBoxIcon}/>;
             }, this)}
 
           </ul>
 
         </div>
       </div>
-
-
     );
   }
 

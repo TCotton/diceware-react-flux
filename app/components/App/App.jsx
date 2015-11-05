@@ -1,8 +1,5 @@
 import styles from './_App.scss';
-
 import React, { Component } from 'react';
-import AppActions from '../../actions/AppActions';
-import ItemsStore from '../../stores/ItemsStore';
 import InputCtrlView from './../Input/InputCtrlView';
 import HeaderCtrlView from './../Header/HeaderCtrlView';
 

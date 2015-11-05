@@ -58,7 +58,7 @@ if (DEBUG || TEST) {
   ].join('!'));
 }
 
-var loaders = [
+let loaders = [
   {
     test: /\.jsx?$/,
     exclude: /node_modules/,

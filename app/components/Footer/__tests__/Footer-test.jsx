@@ -9,7 +9,9 @@ describe('Footer', () => {
     let footer = TestUtils.renderIntoDocument(
       <Footer />
     );
+
     let footerElem = React.findDOMNode(footer);
+
     expect(footerElem.tagName.toLowerCase()).to.equal('footer');
   });
 });

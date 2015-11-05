@@ -47,6 +47,7 @@ describe('BaseStore', () => {
 
     let store = new TestStore();
     let onChange = sinon.spy();
+
     store.addChangeListener(onChange);
 
     store.setAll([{
@@ -65,6 +66,7 @@ describe('BaseStore', () => {
 
     let store = new TestStore();
     let onChange = sinon.spy();
+
     store.addChangeListener(onChange);
     store.setAll([{
       foo: 'bar'

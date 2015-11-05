@@ -1,11 +1,9 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';
 import DicewareApi from '../api/DicewareApi';
-import DataCache from '../api/dataCache';
 
 import {
   GET_KEYWORD_LIST,
-  GET_KEYWORD_NUMBERS,
-  SET_KEYWORD_NUMBERS,
+  SET_KEYWORD_NUMBERS
 } from '../constants/AppConstants';
 
 class AppActions {

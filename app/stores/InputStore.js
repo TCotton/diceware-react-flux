@@ -8,7 +8,6 @@ import cryptoMixin from '../mixins/cryptoMixin';
 
 import {
   GET_KEYWORD_LIST,
-  GET_KEYWORD_NUMBERS,
   SET_KEYWORD_NUMBERS
 } from '../constants/AppConstants';
 
@@ -16,8 +15,6 @@ const CHANGE_EVENT = 'change';
 
 let _numKeywords = '';
 let _keywords = '';
-let _findWorkds = false;
-let _dicewordsArray = '';
 
 var InputStore = Object.assign({}, EventEmitter.prototype, cryptoMixin, {
 

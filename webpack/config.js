@@ -1,17 +1,17 @@
-var path = require('path');
-var util = require('util');
-var autoprefixer = require('autoprefixer-core');
-var pkg = require('../package.json');
+let path = require('path');
+let util = require('util');
+let autoprefixer = require('autoprefixer-core');
+let pkg = require('../package.json');
 
-var loaders = require('./loaders');
-var plugins = require('./plugins');
+let loaders = require('./loaders');
+let plugins = require('./plugins');
 
-var DEBUG = process.env.NODE_ENV === 'development';
-var TEST = process.env.NODE_ENV === 'test';
+let DEBUG = process.env.NODE_ENV === 'development';
+let TEST = process.env.NODE_ENV === 'test';
 
-var jsBundle = path.join('js', util.format('[name].%s.js', pkg.version));
+let jsBundle = path.join('js', util.format('[name].%s.js', pkg.version));
 
-var entry = {
+let entry = {
   app: ['./app.jsx']
 };
 
@@ -26,7 +26,7 @@ if (DEBUG) {
   entry.app.push('webpack/hot/dev-server');
 }
 
-var config = {
+let config = {
   context: path.join(__dirname, '../app'),
   cache: DEBUG,
   debug: DEBUG,
@@ -43,8 +43,8 @@ var config = {
     loaders: loaders
   },
   postcss: [
-    autoprefixer
-    //require('postcss-focus')
+    autoprefixer,
+    require('postcss-focus')
   ],
   plugins: plugins,
   resolve: {
