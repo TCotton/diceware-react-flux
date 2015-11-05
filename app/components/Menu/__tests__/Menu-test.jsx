@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React from 'react/addons';
 import { expect } from 'chai';
 
@@ -77,3 +78,4 @@ describe('Menu', () => {
     });
   });
 });
+/*eslint-enable */

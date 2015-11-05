@@ -1,6 +1,6 @@
 {
   "name": "diceware-react-flux",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Diceware project built on top of React / Flux base.",
   "repository": "https://github.com/TCotton/diceware-react-flux",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+    "autoprefixer": "^6.0.3",
     "babel-core": "^5.8.3",
     "babel-eslint": "^3.1.23",
     "babel-loader": "^5.3.1",

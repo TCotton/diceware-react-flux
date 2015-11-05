@@ -1,7 +1,7 @@
 'use strict';
 let path = require('path');
 let util = require('util');
-let autoprefixer = require('autoprefixer-core');
+let autoprefixer = require('autoprefixer');
 let pkg = require('../package.json');
 
 let loaders = require('./loaders');
@@ -45,11 +45,10 @@ let config = {
   },
   postcss: [
     require('postcss-will-change'),
-    autoprefixer,
+    autoprefixer({ browsers: ['last 2 versions'] }),
     require('postcss-mq-keyframes'),
     require('postcss-focus'),
-    require('postcss-fakeid'),
-    require('postcss-flexbugs-fixes')
+    require('postcss-fakeid')
   ],
   plugins: plugins,
   resolve: {
