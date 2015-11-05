@@ -7,6 +7,7 @@ import AppActions from '../../actions/AppActions';
 const displayName = 'InputCtrlView';
 const propTypes = {};
 const defaultProps = {};
+const dicewordsDefault = ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;'];
 
 class InputCtrlView extends Component {
 
@@ -15,7 +16,7 @@ class InputCtrlView extends Component {
 
     this.state = {
       formKeywords: 6,
-      dicewords: ['&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;', '&nbsp;'],
+      dicewords: dicewordsDefault,
       diceword: null
     };
 
@@ -56,6 +57,7 @@ class InputCtrlView extends Component {
     let reset = (event) => {
       event.preventDefault();
       this.setState({formKeywords: 6});
+      this.setState({dicewords: dicewordsDefault});
     };
 
     let keyWords = this.state.formKeywords;
@@ -105,7 +107,7 @@ class InputCtrlView extends Component {
             <p>It is recommended to use six different words,
               although even using as little as three words will be better than using a password.</p>
 
-            <p>Obviously, memorise and destroy.</p>
+            <p>Obviously, once created memorise and destroy.</p>
 
             <p>When using the passphrase don't forget to add a space inbetween each word.</p>
 

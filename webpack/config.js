@@ -44,8 +44,12 @@ let config = {
     loaders: loaders
   },
   postcss: [
+    require('postcss-will-change'),
     autoprefixer,
-    require('postcss-focus')
+    require('postcss-mq-keyframes'),
+    require('postcss-focus'),
+    require('postcss-fakeid'),
+    require('postcss-flexbugs-fixes')
   ],
   plugins: plugins,
   resolve: {

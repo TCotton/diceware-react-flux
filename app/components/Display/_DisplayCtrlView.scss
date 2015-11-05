@@ -15,7 +15,6 @@
 
 .resultslist__item {
   text-align: center;
-  margin-top: 2em;
   height: 50%;
   line-height: 50px;
   font-size: 1.4em;
@@ -23,10 +22,10 @@
   background: $results-button center center no-repeat;
   background-size: contain;
   position: relative;
-}
 
-.resultslist__item + .resultslist__item {
-  margin-left: 1%;
+  + .resultslist__item {
+    margin-left: 1%;
+  }
 }
 
 [class*=resultslist__remove] {

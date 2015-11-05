@@ -1,17 +1,18 @@
 @import "../../scss/toolkit";
 
 h1 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Audiowide', cursive;
   font-size: 5em;
   margin-bottom: .4em;
   display: inline-block;
   float: left;
+  color: darken($bright_header, 10%);
 }
 
 h2 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Audiowide', cursive;
   font-size: 2em;
-  color: $h2_text;
+  color: $bright_header;
 }
 
 .innerspan {
