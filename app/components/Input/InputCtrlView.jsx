@@ -45,17 +45,23 @@ class InputCtrlView extends Component {
   render() {
     /**
      * update formKeywords state on form change
-     * @param event
+     * @param event {object}
      */
     let setDicewordsNumber = (event) => {
       this.setState({formKeywords: event.target.value});
     };
 
+    /**
+     * @param event {object}
+     */
     let submit = (event) => {
       event.preventDefault();
       AppActions.setKeywordsNumbers(this.state.formKeywords);
     };
 
+    /**
+     * @param event {object}
+     */
     let reset = (event) => {
       event.preventDefault();
       this.setState({formKeywords: 6});

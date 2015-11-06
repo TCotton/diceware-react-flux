@@ -66,4 +66,4 @@ AppDispatcher.register(function(action) {
 
 });
 
-module.exports = InputStore;
+export default InputStore;

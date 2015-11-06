@@ -8,6 +8,12 @@ import crypto from 'crypto';
 
 let cryptoMixin = {
 
+  /**
+   * Uses the nodejs crypto module and the browser-based crypto API to achieve consistent randomness
+   * @param min {integer}
+   * @param max {integer}
+   * @returns {*}
+   */
   getRandomInt: function(min, max) {
 
     // Create byte array and fill with 1 random number
@@ -31,6 +37,14 @@ let cryptoMixin = {
 
     return min + (buf[0] % range);
   },
+
+  /**
+   *
+   * @param num {integer}
+   * @param min {integer}
+   * @param max {integer}
+   * @returns {string}
+   */
 
   getRandomSequence: function(num, min, max) {
 

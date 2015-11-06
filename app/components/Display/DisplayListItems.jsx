@@ -18,6 +18,13 @@ class DisplayListItems extends Component {
     super(props);
   }
 
+  /**
+   * Allows the use of dangerouslySetInnerHTML so that the html entity for empty space, &nbsp;
+   * can be used
+   * A preferable solution would be to use a third-party library such as DOMPurify -> https://github.com/cure53/DOMPurify
+   * @returns {{__html: (*|null)}}
+   * @private
+   */
   _createMarkup() {
     return {__html: this.props.diceword};
   }
