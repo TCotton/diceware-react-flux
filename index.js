@@ -36,7 +36,8 @@ if (app.get('env') === 'production') {
     ],
     styleSrc: [
       '\'self\'',
-      'https://fonts.googleapis.com'
+      'https://fonts.googleapis.com',
+      'http://fonts.googleapis.com'
     ],
     imgSrc: [
       '\'self\'',
