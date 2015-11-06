@@ -1,4 +1,7 @@
-# Diceware
+# Diceware [![Build Status][ci-img]][ci]
+
+[ci-img]: https://travis-ci.org/TCotton/diceware-react-flux.svg
+[ci]: https://travis-ci.org/TCotton/diceware-react-flux
 
 User friendly interface to create passphrases using the Diceware method (http://world.std.com/~reinhold/diceware.html)
 

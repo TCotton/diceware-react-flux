@@ -4,8 +4,8 @@ import { expect } from 'chai';
 
 let { TestUtils } = React.addons;
 
-describe('DiceComponent', () => {
-  it('Should have the correct DiceComponent element', () => {
+describe('TextComponent', () => {
+  it('Should have the correct TextComponent wrapper element', () => {
     let TextComp = TestUtils.renderIntoDocument(
       <TextComponent />
     );

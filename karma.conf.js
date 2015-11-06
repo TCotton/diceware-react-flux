@@ -7,7 +7,7 @@ module.exports = function(config) {
     ],
     exclude: [],
     preprocessors: {
-      'app/app.tests.js': ['webpack', 'sourcemap'],
+      'app/app.tests.js': ['webpack', 'sourcemap']
     },
     reporters: ['mocha'],
     port: 9876,
@@ -15,7 +15,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: [/*'Chrome', */'PhantomJS'],
-    singleRun: false,
+    singleRun: true,
     webpack: require('./webpack/config.test'),
     webpackMiddleware: {
       noInfo: true
