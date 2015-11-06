@@ -14,7 +14,7 @@ class TextComponent extends Component {
   render() {
 
     return (
-      <div className={styles.content__right}>
+      <aside className={styles.content__right}>
         <p>Help protect your online security and privacy by creating unbreakable passphrases.</p>
 
         <p>Original created by author, academic and software engineer, Arnold Reinhold, in 1995;
@@ -28,7 +28,7 @@ class TextComponent extends Component {
         <p>When using the passphrase don't forget to add a space inbetween each word.</p>
 
         <p>Side-project of <a href='https://andywalpole.me/#!/blog/'>Andy Walpole</a>.</p>
-      </div>
+      </aside>
     );
 
   }
