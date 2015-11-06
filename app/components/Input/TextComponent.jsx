@@ -40,3 +40,4 @@ TextComponent.propTypes = propTypes;
 TextComponent.defaultProps = defaultProps;
 
 export default TextComponent;
+

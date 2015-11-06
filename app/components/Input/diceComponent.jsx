@@ -31,8 +31,9 @@ class DiceComponent extends Component {
 
 }
 
-InputCtrlView.displayName = displayName;
-InputCtrlView.propTypes = propTypes;
-InputCtrlView.defaultProps = defaultProps;
+DiceComponent.displayName = displayName;
+DiceComponent.propTypes = propTypes;
+DiceComponent.defaultProps = defaultProps;
 
 export default DiceComponent;
+
