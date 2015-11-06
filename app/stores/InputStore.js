@@ -38,6 +38,10 @@ var InputStore = Object.assign({}, EventEmitter.prototype, cryptoMixin, {
     return _numKeywords;
   },
 
+  /**
+   * Uses the crypto mixin to return a random array of diceware words
+   * @returns {Array}
+   */
   getKeywordsByNumber: function() {
 
     let dicewordsArray = [];
