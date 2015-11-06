@@ -30,7 +30,9 @@ if (app.get('env') === 'production') {
       '\'self\''
     ],
     scriptSrc: [
-      '\'self\''
+      '\'self\'',
+      '\'unsafe-inline\'',
+      'https://ajax.googleapis.com'
     ],
     styleSrc: [
       '\'self\'',
@@ -45,19 +47,16 @@ if (app.get('env') === 'production') {
       'https://fonts.gstatic.com'
     ],
     frameSrc: [
-      '\'self\''
+      '\'none\''
     ],
     sandbox: [
-      'allow-forms',
-      'allow-scripts',
-      'allow-same-origin'
+      'allow-scripts'
     ],
-    // Set to an empty array to allow nothing through
     objectSrc: [
-      '\'self\''
+      '\'none\''
     ],
     connectSrc: [
-      '\'self\''
+      '\'none\''
     ],
 
     // Set to true if you only want browsers to report errors, not block them

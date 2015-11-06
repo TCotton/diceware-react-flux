@@ -2,6 +2,8 @@
  * Created by andywalpole on 31/10/15.
  */
 
+import crypto from 'crypto';
+
 'use strict';
 
 let cryptoMixin = {

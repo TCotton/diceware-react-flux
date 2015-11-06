@@ -2,9 +2,22 @@
 <html class="no-js" lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="origin-when-crossorigin">
+  <link rel="canonical" href="https://diceware.buzz"/>
   <title>Diceware</title>
-  <link href='https://fonts.googleapis.com/css?family=Audiowide|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <script>
+    WebFontConfig = {
+      google: {
+        families: ['Audiowide','Inconsolata:400,700']
+      }
+    };
+    (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+    })(document);
+  </script>
   <% if (debug === false) { %>
   <link type="text/css" rel="stylesheet" media="all" href="css/app.<%= version %>.css" />
   <% } %>

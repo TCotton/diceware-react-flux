@@ -1,6 +1,6 @@
 {
   "name": "diceware-react-flux",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "Diceware project built on top of React / Flux base.",
   "repository": "https://github.com/TCotton/diceware-react-flux",
   "license": "MIT",
@@ -94,6 +94,6 @@
     "webpack-dev-server": "^1.10.1"
   },
   "engines": {
-    "node": ">=4.2.0"
+    "node": "=4.2.2"
   }
 }
