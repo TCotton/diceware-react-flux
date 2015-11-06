@@ -16,7 +16,26 @@ let csp = require('helmet-csp');
 const app = express();
 const sixMonths = 14515200;
 
+/**
+ * redirect www to non-www domain
+ * @param req
+ * @param res
+ * @param next
+ * @returns {*}
+ */
+function wwwRedirect(req, res, next) {
+  if (req.headers.host.slice(0, 4) === 'www.') {
+    let newHost = req.headers.host.slice(4);
+
+    return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
+  }
+  next();
+}
+
 if (app.get('env') === 'production') {
+
+  app.set('trust proxy', true);
+  app.use(wwwRedirect);
 
   app.use(helmet.frameguard('deny'));
   app.use(helmet.xssFilter());
@@ -31,13 +50,13 @@ if (app.get('env') === 'production') {
     ],
     scriptSrc: [
       '\'self\'',
-      '\'unsafe-inline\'',
-      'https://ajax.googleapis.com'
+      'https://ajax.googleapis.com',
+      'https://diceware.buzz'
     ],
     styleSrc: [
       '\'self\'',
       'https://fonts.googleapis.com',
-      'http://fonts.googleapis.com'
+      'https://diceware.buzz'
     ],
     imgSrc: [
       '\'self\'',
