@@ -34,7 +34,6 @@ class DisplayListItems extends Component {
     return (
       <li className={styles.resultslist__item} data-id={this.props.number}>
         <span ref='dicewareHTML' dangerouslySetInnerHTML={this._createMarkup()}></span>
-        <span className={styles.resultslist__removeitem} ref='removeListItem' onClick={this.props.onClick}></span>
       </li>
     );
 

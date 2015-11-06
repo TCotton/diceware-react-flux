@@ -11,6 +11,26 @@
     font-size: 1.5em;
     margin-bottom: calc(1.429em / 2);
   }
+
+  a:link {
+    color: $text;
+  }
+
+  a:visited {
+    color: $text;
+  }
+
+  a:focus {
+    color: $text;
+  }
+
+  a:hover {
+    color: $text;
+  }
+
+  a:active {
+    color: $text;
+  }
 }
 
 .content__inner {

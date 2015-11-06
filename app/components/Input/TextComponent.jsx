@@ -20,14 +20,14 @@ class TextComponent extends Component {
         <p>Original created by author, academic and software engineer, Arnold Reinhold, in 1995;
           Diceware is still the “gold standard” for creating secure passphrases.</p>
 
-        <p>It is recommended to use six different words,
-          although even using as little as three words will be better than using a password.</p>
+        <p>It is recommended to use a minimum of six different words,
+          although even using as little as three words is preferable to using a password.</p>
 
-        <p>Obviously, once created memorise and destroy.</p>
+        <p>Obviously, once created, memorise and destroy.</p>
 
         <p>When using the passphrase don't forget to add a space inbetween each word.</p>
 
-        <p>Side-project of Andy Walpole.</p>
+        <p>Side-project of <a href="https://andywalpole.me/#!/blog/">Andy Walpole</a>.</p>
       </div>
     );
 
