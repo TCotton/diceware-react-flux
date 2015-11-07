@@ -131,11 +131,11 @@
 
 .form__inputLabel {
   position: relative;
-
+  border: 1px solid transparent;
   &::after {
     content: ' ';
     position: absolute;
-    top: 13px;
+    top: 8px;
     right: 7px;
     width: 0;
     height: 0;
@@ -149,7 +149,7 @@
   &::before {
     content: ' ';
     position: absolute;
-    top: 21px;
+    top: 16px;
     right: 7px;
     width: 0;
     height: 0;
@@ -182,8 +182,15 @@
 }
 
 select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
+
+/*:-moz-any(select) {
+  width: 110%;
+}*/
 
 /*
 .form__input select:focus {
