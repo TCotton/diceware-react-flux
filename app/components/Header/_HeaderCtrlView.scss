@@ -19,7 +19,7 @@ h2 {
   display: inline-block;
   float: left;
 }
-
+/* comments here */
 .header {
   margin: 0 auto;
   width: 1024px;
@@ -29,5 +29,5 @@ h2 {
 
 .header__block {
   align-self: flex-end;
-  flex: 1 100%;
+  flex: 1;
 }

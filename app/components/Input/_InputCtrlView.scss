@@ -51,11 +51,13 @@
 .content__left {
   flex: 1 25%;
   order: 1;
+  max-width: 100%
 }
 
 .content__right {
   flex: 1 75%;
   order: 2;
+  max-width: 100%
 }
 
 .content__leftfirstcolumn,
@@ -80,32 +82,40 @@
 
 .cube__side:nth-child(1) {
   background: $dice-side-one center center no-repeat;
-  z-index: 1;
+  z-index: 0;
 }
 
 .cube__side:nth-child(2) {
   background: $dice-side-two center center no-repeat;
-  z-index: 2;
+  z-index: 0;
 }
 
 .cube__side:nth-child(3) {
   background: $dice-side-three center center no-repeat;
-  z-index: 3;
+  z-index: 0;
 }
 
 .cube__side:nth-child(4) {
   background: $dice-side-four center center no-repeat;
-  z-index: 4;
+  z-index: 0;
 }
 
 .cube__side:nth-child(5) {
   background: $dice-side-five center center no-repeat;
-  z-index: 5;
+  z-index: 0;
 }
 
 .cube__side:nth-child(6) {
   background: $dice-side-six center center no-repeat;
-  z-index: 6;
+  z-index: 0;
+}
+
+.cube__zindex:first-of-type {
+  z-index: 2;
+}
+
+#selectinstruction {
+  font-size: 1.4em;
 }
 
 .form__label,
@@ -119,23 +129,66 @@
   font-size: 1.4em;
 }
 
+.form__inputLabel {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 13px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $dark;
+    display: block;
+    z-index: 1;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 21px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $dark;
+    display: block;
+    z-index: 1;
+  }
+}
+
 .form__input {
-  font-size: 1.4em;
-  background: $results-button center center no-repeat;
-  background-size: contain;
+  font-size: 14px;
   height: 40px;
   width: 90px;
   border-radius: 5px;
-  border: none;
-  text-align: center;
-  padding: 0 0 0 20px;
   margin-bottom: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 5px solid $grey;
+  background: $white;
+  font-family: monospace;
+  padding: 0 30px;
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
-.form__input::-webkit-inner-spin-button {
-  border: 5px solid $dark;
-  cursor: pointer;
+select {
+  appearance: none;
 }
+
+/*
+.form__input select:focus {
+  outline: 1px dotted #A9A9A9;
+}*/
 
 .button {
   font-size: 1.4em;

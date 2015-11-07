@@ -45,7 +45,7 @@ let config = {
   },
   postcss: [
     require('postcss-will-change'),
-    autoprefixer({ browsers: ['last 2 versions'] }),
+    autoprefixer({ browsers: ['last 1 versions'] }),
     require('postcss-mq-keyframes'),
     require('postcss-focus'),
     require('postcss-fakeid')

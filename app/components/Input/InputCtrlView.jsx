@@ -48,7 +48,10 @@ class InputCtrlView extends Component {
      * @param event {object}
      */
     let setDicewordsNumber = (event) => {
-      this.setState({formKeywords: event.target.value});
+
+      let newNum = event.target.value > 8 ? 8 : event.target.value < 3 ? 3 : event.target.value;
+
+      this.setState({formKeywords: newNum});
     };
 
     /**
@@ -82,10 +85,24 @@ class InputCtrlView extends Component {
 
               <form action='/' method='post' className='form' id='main-form'>
 
-                <label htmlFor='formKeywords' className={styles.form__label}> # keywords </label>
-                <input type='number' max='8' min='3' id='formKeywords' name='formKeywords'
-                       className={styles.form__input}
-                       value={keyWords} onChange={setDicewordsNumber} ref='formKeywords'/>
+                <div id='selectinstruction'># keywords</div>
+                <label htmlFor='formKeywords' className={styles.form__inputLabel} >
+                  <select id='formKeywords'
+                          name='formKeywords'
+                          onChange={setDicewordsNumber}
+                          ref='formKeywords'
+                          aria-describedby='selectinstruction'
+                          className={styles.form__input}
+                          value={keyWords}
+                  >
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                  </select>
+                </label>
 
                 <button type='submit' className={styles.button} onClick={submit}>submit</button>
                 <button type='reset' className={styles.button} onClick={reset}>reset</button>
