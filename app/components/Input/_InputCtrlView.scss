@@ -166,7 +166,7 @@
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 5px solid $grey;
+  border: 5px solid $dark;
   background: $white;
   font-family: monospace;
   padding: 0 30px;
@@ -182,15 +182,6 @@ select {
   -webkit-appearance: none;
   appearance: none;
 }
-
-/*:-moz-any(select) {
-  width: 110%;
-}*/
-
-/*
-.form__input select:focus {
-  outline: 1px dotted #A9A9A9;
-}*/
 
 .button {
   font-size: 1.4em;
