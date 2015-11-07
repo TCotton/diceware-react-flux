@@ -42,34 +42,35 @@ class InputCtrlView extends Component {
     this.setState({dicewords: InputStore.getKeywordsByNumber()});
   }
 
+  /**
+   * @param event {object}
+   */
+  reset = (event) => {
+    event.preventDefault();
+    this.setState({formKeywords: 6});
+    this.setState({dicewords: dicewordsDefault});
+  };
+
+  /**
+   * @param event {object}
+   */
+  submit = (event) => {
+    event.preventDefault();
+    AppActions.setKeywordsNumbers(this.state.formKeywords);
+  };
+
+  /**
+   * update formKeywords state on form change
+   * @param event {object}
+   */
+  setDicewordsNumber = (event) => {
+
+    let newNum = event.target.value > 8 ? 8 : event.target.value < 3 ? 3 : event.target.value;
+
+    this.setState({formKeywords: newNum});
+  };
+
   render() {
-    /**
-     * update formKeywords state on form change
-     * @param event {object}
-     */
-    let setDicewordsNumber = (event) => {
-
-      let newNum = event.target.value > 8 ? 8 : event.target.value < 3 ? 3 : event.target.value;
-
-      this.setState({formKeywords: newNum});
-    };
-
-    /**
-     * @param event {object}
-     */
-    let submit = (event) => {
-      event.preventDefault();
-      AppActions.setKeywordsNumbers(this.state.formKeywords);
-    };
-
-    /**
-     * @param event {object}
-     */
-    let reset = (event) => {
-      event.preventDefault();
-      this.setState({formKeywords: 6});
-      this.setState({dicewords: dicewordsDefault});
-    };
 
     let keyWords = this.state.formKeywords;
 
@@ -86,15 +87,14 @@ class InputCtrlView extends Component {
               <form action='/' method='post' className='form' id='main-form'>
 
                 <div id='selectinstruction'># keywords</div>
-                <label htmlFor='formKeywords' className={styles.form__inputLabel} >
+                <label htmlFor='formKeywords' className={styles.form__inputLabel}>
                   <select id='formKeywords'
                           name='formKeywords'
-                          onChange={setDicewordsNumber}
+                          onChange={this.setDicewordsNumber}
                           ref='formKeywords'
                           aria-describedby='selectinstruction'
                           className={styles.form__input}
-                          value={keyWords}
-                  >
+                          value={keyWords}>
                     <option value='3'>3</option>
                     <option value='4'>4</option>
                     <option value='5'>5</option>
@@ -104,8 +104,8 @@ class InputCtrlView extends Component {
                   </select>
                 </label>
 
-                <button type='submit' className={styles.button} onClick={submit}>submit</button>
-                <button type='reset' className={styles.button} onClick={reset}>reset</button>
+                <button type='submit' className={styles.button} onClick={this.submit}>submit</button>
+                <button type='reset' className={styles.button} onClick={this.reset}>reset</button>
               </form>
 
             </div>
