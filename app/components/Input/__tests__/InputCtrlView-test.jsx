@@ -78,6 +78,8 @@ describe('InputCtrlView events', () => {
 
   });
 
+  /*eslint-disable */
+
   it('it clicks submit button', function() {
 
     let clicked = 0;
@@ -103,5 +105,7 @@ describe('InputCtrlView events', () => {
     expect(clicked).to.equal(1);
 
   });
+
+  /*eslint-enable */
 
 });
