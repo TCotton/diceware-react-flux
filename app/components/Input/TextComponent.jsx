@@ -27,7 +27,8 @@ class TextComponent extends Component {
 
         <p>When using the passphrase don't forget to add a space inbetween each word.</p>
 
-        <p>Side-project of <a href='https://andywalpole.me/#!/side-projects/diceware'>Andy Walpole</a>.</p>
+        <p>Side-project of <a href='https://andywalpole.me/#!/side-projects/diceware'>Andy Walpole</a>.
+          This site uses SSL for a secure connection and doesn't set cookies or use analytical tracking tools.</p>
       </aside>
     );
 
